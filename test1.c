@@ -115,7 +115,7 @@ void ReverseAdjustOneRound(char*q) {
  *
  */
 void MakeSequence(int n1, int n2, int mm, int gap) {
-	FILE *fillfp = fopen("rdseed", "rb");
+	FILE *fillfp = fopen("rdseed.data", "rb");
 	unsigned char readbuffer[63], temp;
 	int latestpoint;
 	char q[500];
