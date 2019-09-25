@@ -16,4 +16,6 @@ Then you can test the generated file biggap10_4_1(or sample.data directly). Noti
 These source files are put in the directory ./LinearComplexityRandomTest. Just compile the c source files in this directory.
 And then use the command like:
                 ./a.out inputfile output.txt
+Notice that in the source file LC_Random_Test.c, there are some lines for paralleling by using omp instructions, so when
+compiling, you can use parameter -openmp to parallel the codes for high speed.
 Then the test result of these 4 test methods will be written in the file output.txt, which included both P and U results.
