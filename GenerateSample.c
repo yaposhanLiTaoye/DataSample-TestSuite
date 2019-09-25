@@ -12,43 +12,7 @@ char C_[501];
 char T_[501];
 int N_, m_, L_;
 char d_;
-/*the complete function to compute the linear complexity by the Berlekamp-Massey Algorithm*/
-int bitLC_li(char *s, int n) {
-	char *C, *B, *T;
-	B = (char*)calloc(n + 1, sizeof(char));
-	C = (char*)calloc(n + 1, sizeof(char));
-	T = (char*)calloc(n + 1, sizeof(char));
-	int N, m, L;
-	char d;
-	m = -1, L = 0;
-	B[0] = C[0] = T[0] = 1;
-	for (int i = 1; i <= n; i++)
-		B[i] = C[i] = T[i] = 0;
-	char *rs = (char*)calloc(n, sizeof(char));
-	for (int i = 0; i < n; i++)
-		rs[i] = s[n - 1 - i];
-	for (N = 0; N < n; N++) {
-		d = s[N];
-		for (int i = 1; i <= L; i++)d ^= C[i] & rs[n - 1 - (N - i)];
-		if (d) {
-			if (N + 1 - L > L) {
-				for (int i = 1; i <= L; i++)T[i] = C[i];
-				for (int i = N - m; i <= N + 1 - L; i++)C[i] ^= B[i - (N - m)];
-				for (int i = 1; i <= L; i++)B[i] = T[i];
-				L = N + 1 - L;
-				m = N;
-			}
-			else {
-				for (int i = N - m; i <= N + 1 - L; i++)C[i] ^= B[i - (N - m)];
-			}
-		}
-	}
-	free(B);
-	free(C);
-	free(T);
-	free(rs);
-	return L;
-}
+
 const int Len = length*samplesize;
 char s[length*samplesize];
 void OneRound(char *q) {
