@@ -1,11 +1,10 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<time.h>
 #include<math.h>
 #include<string.h>
 #define length 1000000
 #define samplesize 1000
-/*calculate the linear complexity in  bits*/
+/*calculate the linear complexity in bits*/
 char B_[501];
 char C_[501];
 char T_[501];
