@@ -51,6 +51,7 @@ int main(int argc, char** argv) {
 			
 			int j ;
 			j = 0;
+			/*the linear complexity random test included in NIST test suite*/
 			t[j] = NIST_Test(buffer, length);
 			if (t[j] >= alpha) pass[j]++;
 			if      (t[j] < 0.1)p_value[j][0]++;
@@ -66,6 +67,7 @@ int main(int argc, char** argv) {
 
 			
 			j = 1;
+			/*HSY test, which has been skipped steps H4 and H5 to generate a P-value validly*/
 			t[j] = Modified_Japan_Test(buffer, length, 1);
 			if (t[j] >= alpha) pass[j]++;
 			if      (t[j] < 0.1)p_value[j][0]++;
@@ -81,6 +83,7 @@ int main(int argc, char** argv) {
 
 
 			j = 2;
+			/*Our DM-1 test*/
 			d = Our_Test(buffer, length, 6);
 			t[j]=d.d1;
 			if (t[j] >= alpha) pass[j]++;
@@ -96,6 +99,7 @@ int main(int argc, char** argv) {
 			else if (t[j] < 1)  p_value[j][9]++;
 
 			j = 3;
+			/*Our DM-2 test*/
 			t[j] = d.d2;
 			if (t[j] >= alpha) pass[j]++;
 			if      (t[j] < 0.1)p_value[j][0]++;
@@ -119,6 +123,7 @@ int main(int argc, char** argv) {
 				KF[i] += (p_value[i][j] - samplesize / 10)*(p_value[i][j] - samplesize / 10);
 			}
 			KF[i] /= (samplesize / 10);
+			/*the P-value of the 1000 generated P-values*/
 			double temp = cephes_igamc(9.0 / 2, KF[i] / 2);
 			if (temp < alphau) RejectNum[i]++;
 			fprintf(fp, "%.6e  %d\n", temp, pass[i]);	
