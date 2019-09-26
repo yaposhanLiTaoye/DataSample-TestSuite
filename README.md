@@ -17,10 +17,7 @@ and you will get the corresponding executable files. Then test the generated fil
 These source files are placed in the directory ./LinearComplexityRandomTest. Enter this directory and compile these c source files there with a command like:
 
             gcc -o FileTest *.c -lm -fopenmp 
-Notice that the input parameter "-fopenmp" in this command is for paralleling, because in the file "LC_Random_Test.c" there are some codes
-written for paralleling by the instruction of omp.       
-
-Then there will be a executable file named "FileTest", and you can now test the sample data by
+   Notice that the input parameter "-fopenmp" in this command is for paralleling, because in the file "LC_Random_Test.c" there are some codes written for paralleling by the instruction of omp. Then there will be a executable file named "FileTest", and you can now test the sample data by
            
            ./FileTest ../biggap10_4_1 TestResult.txt
-The test result of the binary file "biggap_10_4_1" by these 4 test methods then will be written in the file TestResult.txt, which includes both P and U results and the number of the final rejected sequences according to the criteria of U for each test.
+ The test result of the binary file "biggap_10_4_1" by these 4 test methods then will be written in the file TestResult.txt, which includes  both P and U results and the number of the final rejected sequences according to the criteria of U for each test.
