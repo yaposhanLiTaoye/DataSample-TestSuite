@@ -1,5 +1,5 @@
 # DataSample-and-Test-Suite
-This project is for generating a sequence that passs all the NIST test suite and TestU01 batteries and Hamano et al.'s new test 
+This project is for generating a sequence that passs all the NIST test suite,  TestU01 batteries and Hamano et al.'s new test,
 but will be rejected by our proposed DM-1 and DM-2 test.
 
 ##1. Generate the Sample Sequence 
