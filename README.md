@@ -20,4 +20,4 @@ but will be rejected by our proposed DM-1 and DM-2 test.
            
            ./FileTest ../biggap10_4_1 TestResult.txt
    
-   The test result of these 4 test methods for "biggap_10_4_1"  are in the file "TestResult.txt", including both P and U results, and the number of rejected sequences according to the criteria of U.
+   Experimental results of these 4 test methods for "biggap_10_4_1"  are in the file "TestResult.txt", including both P and U results, and the number of rejected sequences according to the criteria of U.
