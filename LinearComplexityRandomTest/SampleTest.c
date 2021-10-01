@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
 			
 			j = 1;
 			/*HSY test, which has been skipped steps H4 and H5 to generate a P-value validly*/
-			t[j] = Modified_Japan_Test(buffer, length, 1);
+			t[j] = Modified_HSY_Test(buffer, length, 1);
 			if (t[j] >= alpha) pass[j]++;
 			if      (t[j] < 0.1)p_value[j][0]++;
 			else if (t[j] < 0.2)p_value[j][1]++;
