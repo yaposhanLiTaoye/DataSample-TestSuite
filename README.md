@@ -10,7 +10,7 @@ but will be rejected by our proposed DM-1 and DM-2 test.
 
    Unzip these two compression packs，there are README or INSTALL files in both of them. Follow the README or INSTALL files and you will get the corresponding executable files after compiling. Then  you may test the generated file "biggap10_4_1". Notice that the size of this data file is 10^9 bits. For the NIST test suite, the input sequence size should be 10^6, and the number of sequences should be 1000.  While for TestU01 batteries, the input size is 10^9.
 
-##3. Test the Generated Sample Data by NIST Linear Complexity Test, HSY Test and Our Proposed DM-1 and DM-2 Test
+##3. Test the Generated Sample Data by NIST Linear Complexity Test, HSY Test and our proposed Deviation Measure Tests
 
    These source files are in the directory ./LinearComplexityRandomTest. Enter this directory and compile these c source files with a command like:
 
